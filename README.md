@@ -1,5 +1,5 @@
 # Tugas Praktikum Mata Kuliah DBDSQL
-Nama : Devan Ferrel
+Nama : Devan Ferrel        
 NIM  : 225150600111031
 
 ## Contents
