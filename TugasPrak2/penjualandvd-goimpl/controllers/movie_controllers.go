@@ -48,6 +48,31 @@ func GetAllMovies(ctx *gin.Context) {
 	})
 }
 
+func GetMovie(ctx *gin.Context) {
+	kodeDvd := ctx.Param("kode")
+
+	var movie models.Movie 
+
+	if err := database.Db.QueryRow("SELECT * FROM movie WHERE kode_dvd = ?", kodeDvd). 
+		Scan(&movie.KodeDVD, &movie.Judul, &movie.HargaSewa, &movie.Denda, &movie.TahunRilis);
+		err != nil {
+			ctx.JSON(http.StatusInternalServerError, res.Response{
+				Message: "internal server error", 
+				Code: http.StatusInternalServerError,
+				Data: err.Error(),
+			})
+			return	
+
+		}
+	
+	ctx.JSON(http.StatusOK, res.Response {
+		Message: "successfully fetch movie",
+		Code: http.StatusOK,
+		Data: movie,
+	})
+
+}
+
 func InsertMovie(ctx *gin.Context) {
 	var movie models.Movie
 

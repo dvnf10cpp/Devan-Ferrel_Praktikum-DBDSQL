@@ -15,8 +15,10 @@ func InitRoute(app *gin.Engine) {
 		})
 	})
 
-	app.POST("/insert/movie", controllers.InsertMovie)
-	app.PATCH("/update/movie/:kode", controllers.UpdateMovie)
-	app.DELETE("/remove/movie/:kode", controllers.DeleteMovie)
-	
+	api := app.Group("/api")
+	api.GET("/movie", controllers.GetAllMovies)
+	api.GET("/movie/:kode", controllers.GetMovie)
+	api.POST("/movie", controllers.InsertMovie)
+	api.PATCH("/movie/:kode", controllers.UpdateMovie)
+	api.DELETE("/movie/:kode", controllers.DeleteMovie)
 }

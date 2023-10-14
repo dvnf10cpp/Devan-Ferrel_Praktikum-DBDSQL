@@ -5,7 +5,6 @@ import (
 	"log"
 	"os"
 	"strings"
-	"fmt"
 
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -23,7 +22,7 @@ func InitDB() {
 }
 
 func MigrateDB() {
-	data, err := os.ReadFile("database/sql/ddl.sql")
+	data, err := os.ReadFile("database/sql/migrate.sql")
 
 	if err != nil {
 		log.Fatal(err)
@@ -33,9 +32,27 @@ func MigrateDB() {
 
 	for _, statement := range statements {
 		if _, err := Db.Exec(statement); err != nil {
-			fmt.Printf("Error executing SQL statement : %v\n", err)
+			log.Printf("Error executing SQL statement : %v\n", err)
 		}
 	}
 
 	log.Println("SQL DDL Executed Successfully")
+}
+
+func SeederDB() {
+	data, err := os.ReadFile("database/sql/seeder.sql")
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	statements := strings.Split(string(data), ";")
+
+	for _, statement := range statements {
+		if _, err := Db.Exec(statement); err != nil {
+			log.Printf("Error executing SQL statement : %v\n", err)	
+		}
+	}
+
+	log.Println("SQL Seeder Executed Successfully")
 }
