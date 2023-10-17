@@ -51,7 +51,8 @@ CREATE TABLE `pelanggan` (
 CREATE TABLE `kontak_pelanggan` (
     no_hp VARCHAR(25),
     kode_pelanggan VARCHAR(10),
-    FOREIGN KEY(kode_pelanggan) REFERENCES pelanggan(kode_pelanggan)
+    FOREIGN KEY(kode_pelanggan) REFERENCES pelanggan(kode_pelanggan),
+    CONSTRAINT kontak_pelanggan_unik1 UNIQUE(no_hp)
 );
 
 CREATE TABLE `transaksi` (
