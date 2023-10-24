@@ -53,8 +53,6 @@ CREATE TABLE mahasiswa (
 
 -- DML INSERTING VALUES INTO TABLE
 
-ALTER TABLE seleksi_masuk MODIFY seleksi_masuk VARCHAR(60);
-
 INSERT INTO fakultas VALUES
 (1, 'Ekonomi dan Bisnis'),
 (2, 'Ilmu Komputer');
@@ -78,6 +76,8 @@ INSERT INTO seleksi_masuk VALUES
 (1, 'SNMPTN', 'SELEKSI NASIONAL MAHASISWA PERGURUAN TINGGI NEGERI'),
 (2, 'SBMPTN', 'SELEKSI BERSAMA MAHASISWA PERGURUAN TINGGI NEGERI');
 
+SELECT * FROM seleksi_masuk;
+
 INSERT INTO mahasiswa VALUES
 (155150400, 1, 211, 'Putri', 2015, '1997-1-1', 'Malang', 'W'),
 (155150401, 1, 211, 'Jono', 2015, '1997-10-2', 'Situbondo', 'P'),
@@ -90,8 +90,8 @@ INSERT INTO mahasiswa VALUES
 -- DML UPDATING VALUES FROM TABLE
 
 UPDATE mahasiswa SET id_program_studi = 219 WHERE nama = 'Putri';
+
 UPDATE fakultas SET fakultas = 'Teknik' WHERE id_fakultas = 2;
 
 DELETE FROM mahasiswa WHERE nama = 'Dodi';
-
 SELECT * FROM mahasiswa;
