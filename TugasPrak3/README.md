@@ -1,5 +1,7 @@
 # 📁 Praktikum 3 : Data Manipulation Language
 
+### [Kode Script SQL](./225150600111031_DevanF_Tugas3.sql)    
+
 Berikut merupakan langkah-langkah untuk mengerjakan tugas praktikum bab 3 mata kuliah Desain dan Basis Data SQL mengenai Data Manipulation Language.
 
 ### 📝 Langkah Percobaan
