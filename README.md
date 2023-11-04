@@ -8,3 +8,4 @@ Kelas : PTI-DBDSQL-A
 2. [Tugas 2 (Data Definition Language)](./TugasPrak2)
 3. [Tugas 3 (Data Manipulation Language)](./TugasPrak3)
 4. [Tugas 4 (SQL Join)](./TugasPrak4/)
+5. [Tugas 4 (ROCFJOIN)](./TugasPrak4/Tugas_ROCFJOIN/)

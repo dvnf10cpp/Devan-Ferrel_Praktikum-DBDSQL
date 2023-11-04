@@ -2,7 +2,7 @@
 
 ### [Kode Script SQL](./225150600111031_DevanFerrel_Tugas4.sql)    
 
-Berikut merupakan langkah-langkah untuk mengerjakan tugas praktikum bab 3 mata kuliah Desain dan Basis Data SQL mengenai Data Manipulation Language.
+Berikut merupakan langkah-langkah untuk mengerjakan tugas praktikum bab 4 mata kuliah Desain dan Basis Data SQL mengenai SQL Join.
 
 ### 📝 Langkah Percobaan
 
