@@ -1,5 +1,5 @@
 USE sampel_university;
-
+show tables;
 -- Soal 1
 SELECT student.name, department.dept_name
 FROM student JOIN department ON student.dept_name = department.dept_name
