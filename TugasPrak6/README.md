@@ -1,4 +1,4 @@
-# 📁 Praktikum 5 : Fungsi Skalar dan Fungsi Agregasi
+# 📁 Praktikum 6 : Union dan Subquery
 
 ### [Kode Script SQL](./225150600111031_DevanF_Tugas5.sql) 
 
