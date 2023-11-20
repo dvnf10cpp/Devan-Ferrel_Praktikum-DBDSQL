@@ -34,7 +34,7 @@ CREATE TABLE program_studi (
 CREATE TABLE seleksi_masuk (
     id_seleksi_masuk SMALLINT PRIMARY KEY,
     singkat VARCHAR(12),
-    seleksi_masuk VARCHAR(45)
+    seleksi_masuk VARCHAR(60)
 );
 
 CREATE TABLE mahasiswa (
@@ -48,7 +48,7 @@ CREATE TABLE mahasiswa (
     jenis_kelamin CHAR(1),
     FOREIGN KEY(id_seleksi_masuk) REFERENCES seleksi_masuk(id_seleksi_masuk),
     FOREIGN KEY(id_program_studi) REFERENCES program_studi(id_program_studi),
-    CONSTRAINT check_jk CHECK(jenis_kelamin IN ('W','P'))
+    CONSTRAINT check_jk CHECK(jenis_kelamin IN ('F','M'))
 );
 
 -- DML INSERTING VALUES INTO TABLE
@@ -76,16 +76,13 @@ INSERT INTO seleksi_masuk VALUES
 (1, 'SNMPTN', 'SELEKSI NASIONAL MAHASISWA PERGURUAN TINGGI NEGERI'),
 (2, 'SBMPTN', 'SELEKSI BERSAMA MAHASISWA PERGURUAN TINGGI NEGERI');
 
-SELECT * FROM seleksi_masuk;
-
 INSERT INTO mahasiswa VALUES
-(155150400, 1, 211, 'Putri', 2015, '1997-1-1', 'Malang', 'W'),
-(155150401, 1, 211, 'Jono', 2015, '1997-10-2', 'Situbondo', 'P'),
-(155150402, 2, 211, 'Bocchi', 2017, '1999-9-17', 'Tokyo', 'W'),
-(155150403, 2, 212, 'Ryo', 2017, '1999-4-18', 'Tokyo', 'W'),
-(155150404, 2, 212, 'Dengklek', 2016, '1998-5-4', 'Surabaya', 'P'),
-(155150405, 2, 212, 'Joni', 2016, '1998-5-4', 'Bekasi', 'P'),
-(155150406, 2, 211, 'Dodi', 2016, '1998-5-4', 'Bekasi', 'P');
+(155150400, 1, 211, 'Putri', 2015, '1997-1-1', 'Malang', 'F'),
+(155150401, 1, 211, 'Jono', 2015, '1997-10-2', 'Situbondo', 'M'),
+(155150402, 2, 211, 'Bocchi', 2017, '1999-9-17', 'Tokyo', 'F'),
+(155150403, 2, 212, 'Ryo', 2017, '1999-4-18', 'Tokyo', 'F'),
+(155150406, 2, 211, 'Dodi', 2016, '1998-5-4', 'Bekasi', 'F');
+
 
 -- DML UPDATING VALUES FROM TABLE
 
