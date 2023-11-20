@@ -9,4 +9,5 @@ Kelas : PTI-DBDSQL-A
 3. [Tugas 3 (Data Manipulation Language)](./TugasPrak3)
 4. [Tugas 4 (SQL Join)](./TugasPrak4/)
 5. [Tugas 4 (ROCFJOIN)](./TugasPrak4/Tugas_ROCFJOIN/)
-6. [Tugas 5 ()]
+6. [Tugas 5 (Fungsi Skalar dan Agregasi)](./TugasPrak5)
+7. [Tugas 6 (Union dan Join)](./TugasPrak6)
